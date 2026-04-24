@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --amber: #D8A95B;
+  --amber-dark: #e07020;
+  --navy: #000000;
+  --navy-mid: #152844;
+  --navy-light: #1e3a5f;
+  --text-dark: #1a2332;
+}
+
+@theme inline {
+  --color-amber: var(--amber);
+  --color-amber-dark: var(--amber-dark);
+  --color-navy: var(--navy);
+  --color-navy-mid: var(--navy-mid);
+  --font-sans: var(--font-geist-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div,
+strong,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-style: normal !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  color: #1a2332;
+  background: #ffffff;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D8A95B;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.underline-amber {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #D8A95B;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
+}
+
+.btn-amber {
+  background: #D8A95B;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-amber:hover {
+  background: #dfaa54;
+}
+
+
+/* Custom Scrollbar for Webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #D8A95B;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #e07020;
+}

@@ -1,0 +1,89 @@
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+const navLinks = [
+  { label: "Home", href: "#", active: true },
+  { label: "About Us", href: "#" },
+  { label: "Search Your Hotel", href: "#" },
+  { label: "Contact Us", href: "#" },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // change after 50px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#16191C]" : "bg-transparent"}`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-0.5 sm:py-2 lg:py-4">
+        <div className="flex items-center justify-between h-[68px]">
+
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2.5 shrink-0">
+            <Image src="/images/logo.png" alt="Logo" width={1920} height={1080} className="w-[180px] h-auto" />
+          </Link>
+
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-7">
+            {navLinks.map((l) => (
+              <Link
+                key={l.label}
+                href={l.href}
+                className={`text-sm font-medium transition-colors ${l.active
+                  ? "text-[#D8A95B] border-b border-[#D8A95B] pb-0.5"
+                  : "text-white hover:text-[#D8A95B]"
+                  }`}
+              >
+                {l.label}
+              </Link>
+            ))}
+            {/* Auth buttons */}
+            <div className="hidden lg:flex items-center gap-3 ml-12">
+              <button className="px-5 py-2 text-sm font-normal text-black bg-white border border-white rounded-full hover:border-[#D8A95B] hover:bg-[#D8A95B] hover:text-[#ffffff] transition-colors">
+                Login
+              </button>
+              <button className="px-5 py-2 text-sm font-normal text-white rounded-full bg-transparent border border-white hover:bg-white hover:text-black transition-colors">
+                Register
+              </button>
+            </div>
+          </nav>
+
+
+          {/* Mobile toggle */}
+          <button className="lg:hidden text-white p-1" onClick={() => setOpen(!open)} aria-label="Menu">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {open
+                ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        {open && (
+          <div className="lg:hidden border-t border-white/10 py-4 flex flex-col gap-3">
+            {navLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="text-gray-300 text-sm hover:text-[#D8A95B] transition-colors">
+                {l.label}
+              </Link>
+            ))}
+            <div className="flex gap-3 pt-2">
+              <button className="flex-1 py-2 text-sm text-white border border-white/30 rounded-md">Login</button>
+              <button className="flex-1 py-2 text-sm text-white rounded-md btn-amber">Register</button>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
