@@ -47,8 +47,8 @@ export default function PackageBooking() {
               />
             </div>
 
-            <textarea 
-              placeholder="Your Message" 
+            <textarea
+              placeholder="Your Message"
               className="w-full h-32 border border-gray-200 rounded px-4 py-3 text-sm outline-none focus:border-[#D8A95B] transition-colors text-gray-600 bg-white resize-none"
             ></textarea>
 
@@ -86,14 +86,14 @@ export default function PackageBooking() {
                     Integer dictum vel orci in aliquet. Proin a elementum quam. Aliquam tincidunt vestibulum blandit. Sed at lectus ornare urna dictum aliquam. Donec quis rutrum mauris.
                   </span>
                 </p>
-                
+
                 <div className="flex items-center gap-4 mb-10">
                   <div className="h-px bg-[#D8A95B] flex-1" />
                   <div className="h-px bg-[#D8A95B] w-12" />
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-6 mt-6">
-                  <div className="p-3 rounded-full bg-[#D8A95B]/10 w-fit">
+                  <div className="p-3 rounded-full bg-[#D8A95B]/10 w-fit h-fit">
                     <PhoneCall strokeWidth={1.5} className="w-8 h-8 text-[#D8A95B]" />
                   </div>
                   <div className="flex flex-col gap-2">
