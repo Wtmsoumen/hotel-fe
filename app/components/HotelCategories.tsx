@@ -45,7 +45,7 @@ export default function HotelCategories() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-4 mb-10 overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap">
+        {/* <div className="flex gap-4 mb-10 overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -58,7 +58,7 @@ export default function HotelCategories() {
               {tab}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Property cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

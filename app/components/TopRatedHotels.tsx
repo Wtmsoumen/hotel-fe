@@ -2,6 +2,9 @@ import { ArrowRight, Clock3, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
+import dummy1 from "../../public/images/dummy1.png"
+import dummy2 from "../../public/images/dummy2.png"
+import dummy3 from "../../public/images/dummy3.png"
 
 const hotels = [
   {
@@ -11,7 +14,7 @@ const hotels = [
     rating: 5,
     reviews: 128,
     price: 1600,
-    image: "https://picsum.photos/seed/stayent-hotel1/600/400",
+    image: dummy1,
     badge: "Best Choice",
   },
   {
@@ -21,7 +24,7 @@ const hotels = [
     rating: 5,
     reviews: 214,
     price: 2200,
-    image: "https://picsum.photos/seed/stayent-hotel2/600/400",
+    image: dummy2,
     badge: "Top Rated",
   },
   {
@@ -31,7 +34,7 @@ const hotels = [
     rating: 4,
     reviews: 95,
     price: 1850,
-    image: "https://picsum.photos/seed/stayent-hotel3/600/400",
+    image: dummy3,
     badge: "Popular",
   },
 ];
