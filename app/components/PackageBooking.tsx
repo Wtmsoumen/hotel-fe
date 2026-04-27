@@ -76,7 +76,7 @@ export default function PackageBooking() {
             <div className="flex flex-col lg:items-end justify-center w-full relative z-10">
               <div className="w-full lg:w-[55%] lg:pl-10">
                 <span className="section-tag">Hotel Booking</span>
-                <h2 className="section-title mb-6 text-white">Check Availability</h2>
+                <h2 className="section-title mb-6 text-white!">Check Availability</h2>
 
                 <p className="text-white/80 text-sm sm:text-base font-light mb-8 flex flex-col gap-6">
                   <span>
