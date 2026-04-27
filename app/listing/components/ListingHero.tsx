@@ -16,8 +16,8 @@ export default function ListingHero() {
       <div className="absolute inset-0 bg-linear-to-t to-[#001422E5] via-[#00427462] from-[#00427400]" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center flex-1 pt-32 pb-0 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center text-center mb-16 sm:mb-23">
+      <div className="relative z-10 flex flex-col justify-center flex-1 pt-20 sm:pt-32 pb-0 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center text-center mb-12 sm:mb-23">
           <h1 className="text-white font-bold text-4xl sm:text-6xl lg:text-[72px] uppercase leading-tight mb-4">
             Premium Experiences
           </h1>
@@ -29,7 +29,7 @@ export default function ListingHero() {
         {/* Search Card */}
         <div className="bg-white rounded-3xl shadow-2xl lg:absolute lg:bottom-[-4em] lg:left-0 lg:right-0 mx-auto w-full lg:w-[94.25%] overflow-visible">
           {/* Tabs */}
-          <div className="flex overflow-x-auto scrollbar-hide rounded-full w-fit px-4 sm:px-5 shadow-lg mt-[-24px] relative z-10 bg-white mx-auto border border-gray-100">
+          <div className="flex lg:flex-row overflow-x-auto scrollbar-hide rounded-full lg:w-fit w-[96%] px-4 sm:px-5 shadow-lg mt-[-24px] relative z-10 bg-white mx-auto border border-gray-100">
             {tabs.map((tab, i) => (
               <button
                 key={tab}
