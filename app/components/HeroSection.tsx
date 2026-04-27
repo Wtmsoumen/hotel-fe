@@ -23,26 +23,26 @@ export default function HeroSection() {
       </div> */}
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col justify-center flex-1 pt-28 pb-8 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-white font-bold leading-[1.08] uppercase flex flex-col items-center">
-            <span className="block text-[56px] font-normal">
+      <div className="relative z-10 flex flex-col justify-center flex-1 pt-28 pb-16 sm:pb-24 lg:pb-8 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="text-white font-bold leading-[1.1] uppercase flex flex-col items-center">
+            <span className="block text-3xl sm:text-5xl lg:text-[56px] font-normal">
               Discover The most
             </span>
-            <span className="block text-[84px]">
+            <span className="block text-4xl sm:text-7xl lg:text-[84px]">
               Engaging Place
             </span>
           </h1>
-          <p className="text-white text-[22px] leading-relaxed mb-20">
+          <p className="text-white text-lg sm:text-[22px] leading-relaxed mb-10 sm:mb-20">
             Search deals on hotels, homes, and much more...
           </p>
         </div>
 
         {/* Search bar */}
-        <div className="absolute bottom-[-3em] left-[5%] right-[5%] max-w-6xl mx-auto bg-white rounded-full shadow-lg p-2 pl-5 sm:p-4 sm:pl-10 flex items-center gap-6">
-          <div className="flex items-center gap-3 w-full">
+        <div className="lg:absolute lg:bottom-[-3em] lg:left-[5%] lg:right-[5%] max-w-6xl sm:mx-auto bg-white rounded-3xl lg:rounded-full shadow-lg p-5 lg:p-4 lg:pl-10 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 w-full">
             {/* Where */}
-            <div className="lg:col-span-1 w-[30%]">
+            <div className="w-full lg:w-[30%]">
               <label className="block text-[14px] font-normal text-black tracking-wider ml-1 mb-1.5">
                 Where are you going?
               </label>
@@ -60,7 +60,7 @@ export default function HeroSection() {
             </div>
 
             {/* Check In */}
-            <div className="w-[22%]">
+            <div className="w-full lg:w-[22%]">
               <label className="block text-[14px] font-normal text-black tracking-wider ml-1 mb-1.5">
                 Check In
               </label>
@@ -73,7 +73,7 @@ export default function HeroSection() {
             </div>
 
             {/* Check Out */}
-            <div className="w-[22%]">
+            <div className="w-full lg:w-[22%]">
               <label className="block text-[14px] font-normal text-black tracking-wider ml-1 mb-1.5">
                 Check Out
               </label>
@@ -86,12 +86,12 @@ export default function HeroSection() {
             </div>
 
             {/* Guests */}
-            <div className="w-[30%]">
+            <div className="w-full lg:w-[30%]">
               <label className="block text-[14px] font-normal text-black tracking-wider ml-1 mb-1.5">
                 Guests
               </label>
               <div className="flex items-center gap-2 border border-gray-200 rounded-full px-3 py-2.5 focus-within:border-[#D8A95B] transition-colors">
-                <div className="flex items-center gap-2 w-[45%]">
+                <div className="flex items-center gap-2 w-full lg:w-[45%]">
                   <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
@@ -103,7 +103,7 @@ export default function HeroSection() {
                     <option value="4+">4+</option>
                   </select>
                 </div>
-                <div className="flex items-center gap-2 border-l border-gray-200 pl-2 w-[55%]">
+                <div className="flex items-center gap-2 border-l border-gray-200 pl-2 w-full lg:w-[55%]">
                   <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
@@ -120,12 +120,12 @@ export default function HeroSection() {
           </div>
 
           {/* Search button */}
-          <div className="flex justify-end">
-            <button className="flex items-center justify-center gap-2 btn-amber w-15 h-15 rounded-full text-sm font-semibold">
+          <div className="flex justify-center lg:justify-end w-full lg:w-auto">
+            <button className="flex items-center justify-center gap-2 btn-amber w-full lg:w-15 h-12 lg:h-15 rounded-full text-sm font-semibold">
               <svg className="w-5.5 h-5.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              {/* Search */}
+              <span className="lg:hidden">Search Hotels</span>
             </button>
           </div>
         </div>

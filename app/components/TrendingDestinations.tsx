@@ -26,8 +26,11 @@ export default function TrendingDestinations() {
             <Link
               href="#"
               key={index}
-              className="relative rounded-2xl overflow-hidden block group card-hover"
-              style={{ height: "200px", width: index === 0 ? "40%" : index === destinations?.length - 1 ? "40%" : "28%" }}
+              className={`relative rounded-2xl overflow-hidden block group card-hover h-[200px] 
+                ${index === 0 || index === destinations.length - 1 
+                  ? "w-full md:w-[calc(40%-10px)] lg:w-[calc(40%-12px)]" 
+                  : "w-full sm:w-[calc(50%-10px)] md:w-[calc(30%-10px)] lg:w-[calc(28.5%-12px)]"
+                } flex-grow`}
             >
               <Image
                 src={dest.image}

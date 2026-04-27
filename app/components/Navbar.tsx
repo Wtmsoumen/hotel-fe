@@ -70,19 +70,36 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        {open && (
-          <div className="lg:hidden border-t border-white/10 py-4 flex flex-col gap-3">
-            {navLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="text-gray-300 text-sm hover:text-[#D8A95B] transition-colors">
-                {l.label}
+        <div className={`lg:hidden fixed inset-0 bg-[#16191C] z-50 transition-transform duration-300 transform ${open ? "translate-x-0" : "translate-x-full"}`}>
+          <div className="flex flex-col h-full p-6">
+            <div className="flex items-center justify-between mb-8">
+              <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setOpen(false)}>
+                <Image src="/images/logo.png" alt="Logo" width={1920} height={1080} className="w-[150px] h-auto" />
               </Link>
-            ))}
-            <div className="flex gap-3 pt-2">
-              <button className="flex-1 py-2 text-sm text-white border border-white/30 rounded-md">Login</button>
-              <button className="flex-1 py-2 text-sm text-white rounded-md btn-amber">Register</button>
+              <button className="text-white p-1" onClick={() => setOpen(false)} aria-label="Close Menu">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <nav className="flex flex-col gap-6">
+              {navLinks.map((l) => (
+                <Link
+                  key={l.label}
+                  href={l.href}
+                  className={`text-xl font-medium transition-colors ${l.active ? "text-[#D8A95B]" : "text-white"}`}
+                  onClick={() => setOpen(false)}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="mt-auto flex flex-col gap-4 pb-10">
+              <button className="w-full py-4 text-base text-white border border-white/30 rounded-full">Login</button>
+              <button className="w-full py-4 text-base text-white rounded-full btn-amber">Register</button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );

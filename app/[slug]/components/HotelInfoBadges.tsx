@@ -8,47 +8,48 @@ export default function HotelInfoBadges({ name, rating, reviewCount }: Props) {
 
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 -mt-8.5 flex items-end justify-between">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 -mt-8 sm:-mt-10 lg:-mt-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
       {/* Name + Stars */}
-      <div className="">
-        <h2 className="text-4xl font-medium text-black mb-4">{name}</h2>
-        <div className="flex items-center gap-2 mb-5">
+      <div className="flex-1">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-black mb-4">{name}</h2>
+        <div className="flex items-center gap-3 mb-6">
           <div className="flex gap-0.5">
             {[...Array(5)].map((_, i) => (
-              <FaStar key={i} className={`w-3.5 h-3.5 ${i < Math.floor(rating) ? "text-black" : "text-gray-200"}`} />
+              <FaStar key={i} className={`w-4 h-4 ${i < Math.floor(rating) ? "text-[#D8A95B]" : "text-gray-200"}`} />
             ))}
           </div>
-          <span className="text-sm text-gray-500">{rating} ({reviewCount} Reviews)</span>
+          <span className="text-sm font-medium text-gray-600">{rating} <span className="text-gray-400">({reviewCount} Reviews)</span></span>
         </div>
-        {/* Badges */}
-        <div className="flex items-center py-7 border-y border-[#00000050]">
-          <div className="flex flex-wrap gap-4">
-            {/* Superhost */}
-            <div className="flex items-center gap-2.5 rounded-xl px-4 py-3">
-              <div className="w-8 h-8 rounded-full bg-[#FFF6E8] flex items-center justify-center">
-                <Check className="w-4 h-4 text-[#D8A95B]" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-black">Latiga is a Superhost</p>
-                <p className="text-[11px] text-black">Superhosts are experienced, highly rated Hosts.</p>
-              </div>
+        
+        {/* Badges container */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center py-6 border-y border-gray-200 gap-4 sm:gap-8">
+          {/* Superhost */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#FFF6E8] flex items-center justify-center shrink-0">
+              <Check className="w-5 h-5 text-[#D8A95B]" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-black">Latiga is a Superhost</p>
+              <p className="text-xs text-gray-500">Experienced, highly rated Host.</p>
             </div>
           </div>
 
           {/* Free cancellation */}
-          <div className="flex items-center gap-2.5 rounded-xl px-4 py-3">
-            <div className="w-8 h-8 rounded-full bg-[#FFF6E8] flex items-center justify-center">
-              <Check className="w-4 h-4 text-[#D8A95B]" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#FFF6E8] flex items-center justify-center shrink-0">
+              <Check className="w-5 h-5 text-[#D8A95B]" />
             </div>
             <div>
-              <p className="text-xs font-semibold text-black">Free cancellation for 48 hours</p>
-              <p className="text-[11px] text-black">Get a full refund if you change your mind.</p>
+              <p className="text-sm font-semibold text-black">Free cancellation</p>
+              <p className="text-xs text-gray-500">Full refund within 48 hours.</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex gap-2">
-        <div className="border border-[#00000030] rounded-2xl w-40 h-40 overflow-hidden relative">
+
+      {/* Right Side Cards */}
+      <div className="flex flex-row sm:flex-row gap-4 w-full lg:w-auto">
+        <div className="flex-1 lg:flex-none border border-gray-200 rounded-2xl w-full lg:w-44 h-44 overflow-hidden relative shadow-sm">
           <iframe
             src="https://maps.google.com/maps?q=22.5481474,88.3991694&z=15&output=embed"
             width="100%"
@@ -59,27 +60,22 @@ export default function HotelInfoBadges({ name, rating, reviewCount }: Props) {
             referrerPolicy="no-referrer-when-downgrade"
             title="JW Marriott Hotel Kolkata"
           />
-
-          {/* Button */}
-          <button className="absolute bottom-2 w-[90%] left-[5%] bg-white shadow-sm border-b border-[#00000030] rounded-full py-2 text-[12px] font-normal text-black hover:bg-gray-50 transition-colors">
-            All Reviews
+          <button className="absolute bottom-3 w-[90%] left-[5%] bg-white/90 backdrop-blur-sm shadow-md rounded-full py-2.5 text-xs font-semibold text-black hover:bg-white transition-all">
+            View Map
           </button>
         </div>
-        <div className="border border-[#00000030] rounded-2xl p-2 w-40 h-40 flex flex-col justify-between">
-          <div className="flex flex-col items-start gap-1">
-            <div className="bg-black text-white rounded-lg w-16 h-16 flex items-center justify-center">
-              <span className="text-lg font-bold">4.2</span>
-            </div>
 
-            {/* Label */}
+        <div className="flex-1 lg:flex-none border border-gray-200 rounded-2xl p-4 w-full lg:w-44 h-44 flex flex-col justify-between shadow-sm bg-white">
+          <div className="flex flex-col items-start gap-3">
+            <div className="bg-[#16191C] text-white rounded-xl w-14 h-14 flex items-center justify-center shadow-lg">
+              <span className="text-xl font-bold">4.2</span>
+            </div>
             <div>
-              <p className="text-sm font-medium text-black leading-tight">Very Good</p>
-              <p className="text-[10px] text-black leading-tight">Based on 909 Ratings</p>
+              <p className="text-sm font-bold text-black">Very Good</p>
+              <p className="text-[11px] text-gray-500">Based on 909 Ratings</p>
             </div>
           </div>
-
-          {/* Button */}
-          <button className="w-full bg-white shadow-sm border-b border-[#00000030] rounded-full py-2 text-[12px] font-normal text-black hover:bg-gray-50 transition-colors">
+          <button className="w-full bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full py-2.5 text-xs font-semibold text-black transition-all">
             All Reviews
           </button>
         </div>

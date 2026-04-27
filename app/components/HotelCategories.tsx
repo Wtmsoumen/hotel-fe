@@ -44,8 +44,24 @@ export default function HotelCategories() {
           </Link>
         </div>
 
+        {/* Tabs */}
+        <div className="flex gap-4 mb-10 overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === tab
+                ? "bg-[#D8A95B] text-white shadow-md"
+                : "bg-white text-black hover:bg-gray-50 border border-gray-100"
+                }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
         {/* Property cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filtered.map((p) => (
             <div key={p.id} className="">
               <div className="relative h-88 rounded-2xl overflow-hidden mb-3">

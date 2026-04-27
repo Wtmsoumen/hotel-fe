@@ -51,25 +51,27 @@ export default function BookingProcess() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start justify-center gap-0">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-0">
           {steps.map((step, i) => (
-            <div key={i} className="flex flex-col sm:flex-row items-center flex-1 group">
+            <div key={i} className="flex flex-col md:flex-row items-center flex-1 group w-full md:w-auto">
               {/* Step card */}
-              <div className="flex flex-col items-center text-center px-4 max-w-[200px]">
+              <div className="flex flex-col items-center text-center px-4 max-w-[280px] md:max-w-[200px]">
                 {/* Circle icon */}
-                <div className={`relative flex items-center justify-center`}>
-                  <Image src={step.icon} alt="icon" width={820} height={820} className="flex group-hover:hidden absolute w-22 h-auto" />
-                  <Image src={step.iconColor} alt="iconColor" width={820} height={820} className="hidden group-hover:flex absolute w-22 h-auto" />
-                  <Image src={moveRound} alt="moveRound" width={820} height={820} className="flex group-hover:hidden w-40 h-auto animate-spin [animation-duration:50s]" />
-                  <Image src={moveRoundColor} alt="moveRoundColor" width={820} height={820} className="hidden group-hover:flex w-40 h-auto animate-spin [animation-duration:50s]" />
+                <div className="relative flex items-center justify-center mb-6 md:mb-0">
+                  <Image src={step.icon} alt="icon" width={160} height={160} className="flex group-hover:hidden absolute w-16 h-16 md:w-20 md:h-20" />
+                  <Image src={step.iconColor} alt="iconColor" width={160} height={160} className="hidden group-hover:flex absolute w-16 h-16 md:w-20 md:h-20" />
+                  <Image src={moveRound} alt="moveRound" width={320} height={320} className="flex group-hover:hidden w-32 h-32 md:w-40 md:h-40 animate-spin [animation-duration:50s]" />
+                  <Image src={moveRoundColor} alt="moveRoundColor" width={320} height={320} className="hidden group-hover:flex w-32 h-32 md:w-40 md:h-40 animate-spin [animation-duration:50s]" />
                 </div>
-                <p className="text-base font-semibold text-black mb-2">{step.label}</p>
-                <p className="text-xs text-black font-light leading-relaxed">{step.desc}</p>
+                <div className="mt-4 md:mt-0">
+                  <p className="text-lg md:text-base font-semibold text-black mb-2">{step.label}</p>
+                  <p className="text-xs text-gray-500 font-light leading-relaxed px-2">{step.desc}</p>
+                </div>
               </div>
               {/* Arrow connector */}
               {i < steps.length - 1 && (
-                <div className="hidden sm:flex items-center justify-center mx-2 -mt-22">
-                  <Image src={arrowThreeDash} alt="arrowThreeDash" width={300} height={300} className="w-10 h-auto" />
+                <div className="hidden lg:flex items-center justify-center mx-2 lg:-mt-20">
+                  <Image src={arrowThreeDash} alt="arrowThreeDash" width={100} height={100} className="w-8 lg:w-10 h-auto opacity-40" />
                 </div>
               )}
             </div>

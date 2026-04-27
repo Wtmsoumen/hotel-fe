@@ -18,16 +18,16 @@ export default function HotelGalleryBooking({ images, pricePerNight, rating, rev
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Gallery */}
-          <div className="flex flex-row gap-3 w-full h-[330px]">
+          <div className="flex flex-col sm:flex-row gap-3 w-full h-auto sm:h-[400px] lg:h-[450px]">
             {/* Main image */}
-            <div className="relative w-[70%] h-auto rounded-2xl overflow-hidden">
-              <Image src={images[0]} alt="Hotel main" fill className="object-cover" />
+            <div className="relative w-full sm:w-[70%] h-[250px] sm:h-full rounded-2xl overflow-hidden shadow-sm">
+              <Image src={images[0]} alt="Hotel main" fill className="object-cover" priority />
             </div>
-            {/* Thumbnails 2x2 */}
-            <div className="flex flex-col gap-2 w-[30%] h-full">
+            {/* Thumbnails 2x2 or 4 grid */}
+            <div className="grid grid-cols-4 sm:flex sm:flex-col gap-2 w-full sm:w-[30%] h-auto sm:h-full">
               {images.slice(1, 5).map((src, i) => (
-                <div key={i} className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={src} alt={`Hotel view ${i + 2}`} fill className="object-cover hover:scale-105 transition-transform duration-300" />
+                <div key={i} className="relative w-full aspect-square sm:aspect-auto sm:h-full rounded-xl overflow-hidden shadow-sm">
+                  <Image src={src} alt={`Hotel view ${i + 2}`} fill className="object-cover hover:scale-110 transition-transform duration-500" />
                 </div>
               ))}
             </div>

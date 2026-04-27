@@ -15,10 +15,10 @@ export default function PlanYourTrip() {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-16 mt-20">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mt-12 lg:mt-20">
           {/* Image collage */}
           <div className="lg:w-1/2 w-full">
-            <Image src={Peaceofmind} alt="Peaceofmind" className="w-[613px] h-full" />
+            <Image src={Peaceofmind} alt="Peaceofmind" className="w-full h-auto rounded-2xl shadow-md" />
           </div>
 
           {/* Text */}

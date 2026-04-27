@@ -79,22 +79,22 @@ export default function CustomerFeedback() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           {/* Reviewer list */}
-          <div className="lg:col-span-2 flex flex-row lg:flex-col gap-3 h-[280px] pr-4 overflow-y-auto custom-scrollbar">
+          <div className="lg:col-span-2 flex flex-row lg:flex-col gap-3 h-auto lg:h-[450px] pr-0 lg:pr-4 overflow-x-auto lg:overflow-y-auto custom-scrollbar pb-4 lg:pb-0">
             {testimonials.map((t, i) => (
               <button
                 key={t.id}
                 onClick={() => setActive(i)}
-                className={`flex items-center gap-3 p-4 rounded-2xl transition-all text-left w-full ${active === i
+                className={`flex items-center gap-3 p-3 sm:p-4 rounded-2xl transition-all text-left min-w-[200px] sm:min-w-[250px] lg:w-full ${active === i
                   ? "bg-white shadow-lg border border-[#132A50]"
                   : "bg-white border border-[#D9D9D9] hover:shadow-md"
                   }`}
               >
-                <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
+                <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0">
                   <Image src={t.avatar} alt={t.name} fill className="object-cover" />
                 </div>
-                <div className="hidden sm:block">
-                  <p className="font-bold text-[#000000] text-sm">{t.name}</p>
-                  <p className="text-gray-400 text-xs">{t.role}</p>
+                <div className="block">
+                  <p className="font-bold text-[#000000] text-xs sm:text-sm whitespace-nowrap">{t.name}</p>
+                  <p className="text-gray-400 text-[10px] sm:text-xs whitespace-nowrap">{t.role}</p>
                 </div>
               </button>
             ))}
