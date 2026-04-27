@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BedDouble, Clock3, Lock, MapPin, Users } from "lucide-react";
+import { BedDouble, Image as ImageIcon, MapPin, Users } from "lucide-react";
 import { FaStar } from "react-icons/fa";
 
 const rooms = [
@@ -14,7 +14,7 @@ const rooms = [
     beds: 1,
     capacity: 2,
     image: "https://picsum.photos/seed/room-dlx/600/400",
-    badge: "Best Choice",
+    // badge: "Best Choice",
   },
   {
     id: 2,
@@ -64,17 +64,10 @@ export default function HotelRooms() {
               {/* Image */}
               <div className="relative h-52 overflow-hidden rounded-b-2xl">
                 <Image src={room.image} alt={room.type} fill className="object-cover" />
-                {room.badge && (
-                  <span className="absolute top-3 left-3 bg-[#D8A95B] text-white text-[11px] font-normal px-2.5 py-1 rounded-md uppercase tracking-wide">
-                    {room.badge}
-                  </span>
-                )}
                 {/* Right to Hotel button */}
-                <button className="group flex items-center gap-4 absolute left-22.5 bottom-3 -translate-x-1/2 bg-white/90 hover:bg-white text-black text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
-                  <div className="duration-300 text-[#D8A95B] text-xs font-normal bg-[#D8A95B1A] group-hover:bg-[#D8A95B] group-hover:text-white rounded-full p-2">
-                    <Lock className="w-3 h-3" />
-                  </div>
-                  Login to View
+                <button className="group flex items-center gap-2 absolute right-16 bottom-3 translate-x-1/2 bg-white/90 hover:bg-white text-black text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
+                  <ImageIcon className="w-4 h-4 text-[#D8A95B]" strokeWidth={2} />
+                  +5 Photos
                 </button>
               </div>
 
@@ -88,9 +81,9 @@ export default function HotelRooms() {
                       {room.location}
                     </div>
                   </div>
-                  <Link href="#" className="duration-300 text-[#D8A95B] text-xs font-normal bg-[#D8A95B1A] hover:bg-[#D8A95B] hover:text-white rounded-full px-4 py-2">
+                  {/* <Link href="#" className="duration-300 text-[#D8A95B] text-xs font-normal bg-[#D8A95B1A] hover:bg-[#D8A95B] hover:text-white rounded-full px-4 py-2">
                     View More
-                  </Link>
+                  </Link> */}
                 </div>
 
 

@@ -12,6 +12,7 @@ import ListingFAQ from "./components/ListingFAQ";
 export default function ListingPage() {
   return (
     <main>
+      
       <ListingHero />
       <LuxuryHotels />
       <PopularHotels />
