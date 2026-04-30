@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 import ListingFAQ from "../listing/components/ListingFAQ";
 import FacilitiesSection from "./components/FacilitiesSection";
 import GallerySection from "./components/GallerySection";
