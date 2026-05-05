@@ -14,7 +14,7 @@ export default function LoginPage() {
       {/* Left side – Form */}
       <div className="w-1/2 flex flex-col px-16 py-12 overflow-y-auto">
         {/* Logo */}
-        <div className="mb-8 w-full max-w-[500px] mx-auto">
+        <Link href="/" className="mb-8 w-full max-w-[500px] mx-auto">
           <Image
             src={stayentLogoYellow}
             alt="Stayent"
@@ -22,7 +22,7 @@ export default function LoginPage() {
             height={52}
             className="object-contain"
           />
-        </div>
+        </Link>
 
         <div className="w-full max-w-[500px] mx-auto">
           <h1 className="text-5xl font-medium text-black mb-4">Login</h1>

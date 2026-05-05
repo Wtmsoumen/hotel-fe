@@ -8,7 +8,7 @@ export default function HotelInfoBadges({ name, rating, reviewCount }: Props) {
 
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 -mt-8 sm:-mt-10 lg:-mt-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 mt-6 sm:mt-8 lg:mt-10 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
       {/* Name + Stars */}
       <div className="flex-1">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-black mb-4">{name}</h2>
@@ -20,7 +20,7 @@ export default function HotelInfoBadges({ name, rating, reviewCount }: Props) {
           </div>
           <span className="text-sm font-medium text-gray-600">{rating} <span className="text-gray-400">({reviewCount} Reviews)</span></span>
         </div>
-        
+
         {/* Badges container */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center py-6 border-y border-gray-200 gap-4 sm:gap-8">
           {/* Superhost */}

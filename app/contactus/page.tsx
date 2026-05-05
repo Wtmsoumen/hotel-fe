@@ -2,12 +2,13 @@
 
 import ListingFAQ from "../listing/components/ListingFAQ";
 import HeroSection from "./components/HeroSection";
-
+import register from "../../public/images/register.png";
 import phoneTextCU from "../../public/images/phoneTextCU.svg"
 import mailCU from "../../public/images/mailCU.svg"
 import locationCU from "../../public/images/locationCU.svg"
 import Image from "next/image";
 import Link from "next/link";
+import GetInTouch from "./components/GetInTouch";
 
 
 export default function ContactUsPage() {
@@ -59,6 +60,7 @@ export default function ContactUsPage() {
                     </div>
                 </div>
             </section>
+            <GetInTouch />
             <ListingFAQ />
         </>
     );
