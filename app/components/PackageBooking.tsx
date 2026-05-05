@@ -7,6 +7,7 @@ export default function PackageBooking() {
       <div className="relative flex flex-col lg:block">
         {/* Booking Form */}
         <div className="relative lg:absolute lg:left-[8%] lg:-top-22 z-20 bg-[#FFF8ED] p-8 sm:p-12 w-full lg:w-[35%] shadow-xl order-2 lg:order-none">
+          <div className="w-30 h-3.5 bg-[#D8A95B] block absolute top-0 left-[10%]" />
           <span className="section-tag">Connect with us</span>
           <h2 className="section-title mb-6">Package Booking</h2>
 

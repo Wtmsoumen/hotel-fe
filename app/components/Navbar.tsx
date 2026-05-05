@@ -5,9 +5,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Home", href: "#", active: true },
+  { label: "Home", href: "/", active: true },
   { label: "About Us", href: "/aboutus" },
-  { label: "Search Your Hotel", href: "#" },
+  { label: "Search Your Hotel", href: "/listing" },
   { label: "Contact Us", href: "/contactus" },
 ];
 
@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       {pathname === "/login" || pathname === "/register" ? null : (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#16191C]" : "bg-transparent"}`}>
+        <header className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${scrolled ? "bg-[#16191C]" : "bg-transparent"}`}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-0.5 sm:py-2 lg:py-4">
             <div className="flex items-center justify-between h-[68px]">
 
@@ -45,7 +45,7 @@ export default function Navbar() {
                   <Link
                     key={l.label}
                     href={l.href}
-                    className={`text-sm font-medium transition-colors ${l.active
+                    className={`text-sm font-medium transition-colors ${pathname === l.href
                       ? "text-[#D8A95B] border-b border-[#D8A95B] pb-0.5"
                       : "text-white hover:text-[#D8A95B]"
                       }`}

@@ -7,6 +7,7 @@ import RoomsCarousel from "./components/RoomsCarousel";
 import FeaturesSection from "./components/FeaturesSection";
 import WelcomeSection from "./components/WelcomeSection";
 import HeroSection from "./components/HeroSection";
+import OurGallery from "../components/BestMemorablePlaces";
 
 
 
@@ -17,7 +18,7 @@ export default function AboutUsPage() {
             <WelcomeSection />
             <FeaturesSection />
             <RoomsCarousel />
-            <GallerySection />
+            <OurGallery />
             <FacilitiesSection />
             <ListingFAQ />
         </>

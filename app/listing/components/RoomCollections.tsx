@@ -85,12 +85,12 @@ export default function RoomCollections() {
                   </span>
                 )}
                 {/* Right to Hotel button */}
-                <button className="group flex items-center gap-4 absolute left-22.5 bottom-3 -translate-x-1/2 bg-white/90 hover:bg-white text-black text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
+                <Link href="/login" className="group flex items-center gap-4 absolute left-22.5 bottom-3 -translate-x-1/2 bg-white/90 hover:bg-white text-black text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
                   <div className="duration-300 text-[#D8A95B] text-xs font-normal bg-[#D8A95B1A] group-hover:bg-[#D8A95B] group-hover:text-white rounded-full p-2">
                     <Lock className="w-3 h-3" />
                   </div>
                   Login to View
-                </button>
+                </Link>
               </div>
 
               {/* Info */}

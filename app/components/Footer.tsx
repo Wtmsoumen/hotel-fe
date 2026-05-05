@@ -2,10 +2,16 @@
 
 import { Send } from "lucide-react";
 import Image from "next/image";
+import stayentLogoYellowWhite from "../../public/images/stayentLogoYellowWhite.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const quickLinks = ["Home", "About Us", "Search Your Hotel", "Contact Us"];
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/aboutus" },
+  { label: "Search Your Hotel", href: "/listing" },
+  { label: "Contact Us", href: "/contactus" }
+];
 const otherLinks = ["Terms of Use", "Privacy Policy", "FAQ", "Blog"];
 
 export default function Footer() {
@@ -23,27 +29,27 @@ export default function Footer() {
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
                   <Link href="/" className="flex items-center gap-2.5 shrink-0">
-                    <Image src="/images/logo.png" alt="Logo" width={1920} height={1080} className="w-[160px] h-auto" />
+                    <Image src={stayentLogoYellowWhite} alt="Logo" width={1920} height={1080} className="w-[160px] h-auto" />
                   </Link>
                 </div>
-                <div className="mb-8">
+                <div className="mb-6 flex flex-col">
                   <div className="text-[#D8A95B] text-xs leading-relaxed">
                     Total Free :
                   </div>
-                  <div className="text-white text-sm leading-relaxed">
+                  <Link href="tel:+01234567890" className="text-white text-sm leading-relaxed">
                     +01 234 567 890
-                  </div>
-                  <div className="text-white text-sm leading-relaxed">
+                  </Link>
+                  <Link href="tel:+01234567890" className="text-white text-sm leading-relaxed">
                     +01 234 567 890
-                  </div>
+                  </Link>
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <div className="text-[#D8A95B] text-xs leading-relaxed">
                     Live Support :
                   </div>
-                  <div className="text-white text-sm leading-relaxed">
+                  <Link href="mailto:info@www.hotelbooking.com" className="text-white text-sm leading-relaxed">
                     info@www.hotelbooking.com
-                  </div>
+                  </Link>
                 </div>
               </div>
 
@@ -53,11 +59,11 @@ export default function Footer() {
                   Quick Links
                 </h4>
                 <ul className="space-y-2.5">
-                  {quickLinks.map((l) => (
-                    <li key={l}>
-                      <Link href="#" className="text-white text-sm group hover:text-[#D8A95B] transition-colors flex items-center gap-2">
+                  {quickLinks.map((l, i) => (
+                    <li key={i}>
+                      <Link href={l.href} className="text-white text-sm group hover:text-[#D8A95B] transition-colors flex items-center gap-2">
                         <span className="w-1 h-1 rounded-full group-hover:bg-[#D8A95B] bg-white shrink-0" />
-                        {l}
+                        {l.label}
                       </Link>
                     </li>
                   ))}

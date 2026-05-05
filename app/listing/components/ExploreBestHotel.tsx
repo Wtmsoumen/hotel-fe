@@ -65,12 +65,12 @@ export default function ExploreBestHotel() {
               <div className="relative h-70">
                 <Image src={hotel.image} alt={hotel.name} fill className="rounded-2xl object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent group-hover:scale-105 transition-transform duration-500 rounded-2xl" />
-                <button className="group flex items-center gap-4 absolute -right-13 top-3 -translate-x-1/2 border border-white text-white group-hover:bg-[#d8a85b6e] text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
+                <Link href="/login" className="group flex items-center gap-4 absolute -right-13 top-3 -translate-x-1/2 border border-white text-white group-hover:bg-[#d8a85b6e] text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
                   <div className="duration-300 text-white text-xs font-normal bg-[#D8A95B1A] group-hover:bg-[#D8A95B] group-hover:text-white rounded-full p-2">
                     <Lock className="w-3 h-3" />
                   </div>
                   Login to View
-                </button>
+                </Link>
                 <div className="flex items-start justify-between absolute bottom-0 left-0 right-0 px-3 py-4 bg-[#CDC6C666] backdrop-blur-sm m-2 rounded-2xl">
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-1 text-white/70 text-[11px] mt-0.5">

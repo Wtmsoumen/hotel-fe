@@ -32,12 +32,12 @@ export default function PopularHotels() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
                 {/* Content */}
-                <button className="group flex items-center gap-4 absolute -right-13 top-3 -translate-x-1/2 bg-white/90 hover:bg-white text-black text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
+                <Link href="/login" className="group flex items-center gap-4 absolute -right-13 top-3 -translate-x-1/2 bg-white/90 hover:bg-white text-black text-[11px] font-medium pl-1.5 pr-4 py-1.5 rounded-full whitespace-nowrap transition-colors">
                   <div className="duration-300 text-[#D8A95B] text-xs font-normal bg-[#D8A95B1A] group-hover:bg-[#D8A95B] group-hover:text-white rounded-full p-2">
                     <Lock className="w-3 h-3" />
                   </div>
                   Login to View
-                </button>
+                </Link>
                 <div className="absolute bottom-0 px-5 py-3 flex flex-col justify-between">
                   <h3 className="text-white font-semibold text-sm mb-1">{hotel.name}</h3>
                 </div>

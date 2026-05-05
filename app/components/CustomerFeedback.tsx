@@ -79,7 +79,7 @@ export default function CustomerFeedback() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           {/* Reviewer list */}
-          <div className="lg:col-span-2 flex flex-row lg:flex-col gap-3 h-auto lg:h-[450px] pr-0 lg:pr-4 overflow-x-auto lg:overflow-y-auto custom-scrollbar pb-4 lg:pb-0">
+          <div className="lg:col-span-2 flex flex-row lg:flex-col gap-3 h-auto lg:h-70 pr-0 lg:pr-4 overflow-x-auto lg:overflow-y-auto custom-scrollbar pb-4 lg:pb-0">
             {testimonials.map((t, i) => (
               <button
                 key={t.id}

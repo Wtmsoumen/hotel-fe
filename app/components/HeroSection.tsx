@@ -40,7 +40,7 @@ export default function HeroSection() {
 
         {/* Search bar */}
         <div className="lg:absolute lg:bottom-[-3em] lg:left-[5%] lg:right-[5%] max-w-6xl sm:mx-auto bg-white rounded-3xl lg:rounded-full shadow-lg p-5 lg:p-4 lg:pl-10 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
-          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 w-full">
+          <div className="flex flex-col lg:flex-row items-center gap-4 w-full">
             {/* Where */}
             <div className="w-full lg:w-[30%]">
               <label className="block text-[14px] font-normal text-black tracking-wider ml-1 mb-1.5">
@@ -65,9 +65,9 @@ export default function HeroSection() {
                 Check In
               </label>
               <div className="flex items-center gap-2 border border-gray-200 rounded-full px-3 py-2.5 focus-within:border-[#D8A95B] transition-colors">
-                <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                </svg> */}
                 <input type="date" className="w-full text-sm text-gray-600 outline-none bg-transparent" />
               </div>
             </div>
@@ -78,9 +78,9 @@ export default function HeroSection() {
                 Check Out
               </label>
               <div className="flex items-center gap-2 border border-gray-200 rounded-full px-3 py-2.5 focus-within:border-[#D8A95B] transition-colors">
-                <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                </svg> */}
                 <input type="date" className="w-full text-sm text-gray-600 outline-none bg-transparent" />
               </div>
             </div>
