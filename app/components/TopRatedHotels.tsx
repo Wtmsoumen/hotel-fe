@@ -105,7 +105,7 @@ export default function TopRatedHotels() {
                 <hr className="border-gray-200 my-2" />
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-0.5">
-                    {["", "", "", "", ""].map((i: any) => <FaStar className="text-[#161A1D]" />)}
+                    {["", "", "", "", ""].map((i: any) => <FaStar key={i} className="text-[#161A1D]" />)}
                     <span className="text-[#3F3E3E] text-[14px] font-normal ml-2 mt-1">65 reviews</span>
                   </div>
                   <div className="flex items-center gap-1">
