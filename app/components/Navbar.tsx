@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Home", href: "/", active: true },
   { label: "About Us", href: "/aboutus" },
   { label: "Search Your Hotel", href: "/listing" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact Us", href: "/contactus" },
 ];
 

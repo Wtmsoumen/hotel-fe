@@ -35,7 +35,7 @@ export default function HotelTabs() {
   };
 
   return (
-    <div className="sticky top-[68px] z-40 bg-white border-b border-gray-100 shadow-sm">
+    <div className="sticky top-[100px] z-40 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex overflow-x-auto gap-1" style={{ scrollbarWidth: "none" }}>
           {tabs.map(({ label, id }) => (

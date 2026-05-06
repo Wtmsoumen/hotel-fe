@@ -25,6 +25,12 @@ const hotelData = {
   ],
 };
 
+export function generateStaticParams() {
+  return [
+    { slug: "somerset-downtown" },
+  ];
+}
+
 export default function HotelDetailPage({ params }: { params: { slug: string } }) {
   return (
     <main>
