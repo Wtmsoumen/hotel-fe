@@ -12,7 +12,12 @@ const quickLinks = [
   { label: "Search Your Hotel", href: "/listing" },
   { label: "Contact Us", href: "/contactus" }
 ];
-const otherLinks = ["Terms of Use", "Privacy Policy", "FAQ", "Blog"];
+const otherLinks = [
+  { label: "Terms of Use", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "FAQ", href: "#" },
+  { label: "Blog", href: "/blog" }
+];
 
 export default function Footer() {
 
@@ -20,7 +25,7 @@ export default function Footer() {
 
   return (
     <>
-      {pathname === "/login" || pathname === "/register" ? null : (
+      {pathname === "/login" || pathname === "/register" || pathname.startsWith("/dashboard") ? null : (
         <footer style={{ background: "#16191C" }}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -76,11 +81,11 @@ export default function Footer() {
                   Other Links
                 </h4>
                 <ul className="space-y-2.5">
-                  {otherLinks.map((l) => (
-                    <li key={l}>
-                      <Link href="#" className="text-white text-sm group hover:text-[#D8A95B] transition-colors flex items-center gap-2">
+                  {otherLinks.map((l, i) => (
+                    <li key={i}>
+                      <Link href={l.href} className="text-white text-sm group hover:text-[#D8A95B] transition-colors flex items-center gap-2">
                         <span className="w-1 h-1 rounded-full group-hover:bg-[#D8A95B] bg-white shrink-0" />
-                        {l}
+                        {l.label}
                       </Link>
                     </li>
                   ))}
