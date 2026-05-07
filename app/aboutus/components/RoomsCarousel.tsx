@@ -9,7 +9,7 @@ export default function RoomsCarousel() {
 
     const NextArrow = ({ onClick }: any) => (
         <div
-            className="shadow-md absolute right-[30%] top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center z-20 cursor-pointer bg-white/90 text-white p-2 rounded-full border border-solid border-gray-100"
+            className="shadow-md absolute right-[5%] sm:right-[20%] lg:right-[30%] top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center z-20 cursor-pointer bg-white/90 text-white p-2 rounded-full border border-solid border-gray-100"
             onClick={onClick}
         >
             <ChevronRight className="text-[#d8a95b]" />
@@ -18,7 +18,7 @@ export default function RoomsCarousel() {
 
     const PrevArrow = ({ onClick }: any) => (
         <div
-            className="shadow-md absolute left-[30%] top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center z-20 cursor-pointer bg-white/90 text-white p-2 rounded-full border border-solid border-gray-100"
+            className="shadow-md absolute left-[5%] sm:left-[20%] lg:left-[30%] top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center z-20 cursor-pointer bg-white/90 text-white p-2 rounded-full border border-solid border-gray-100"
             onClick={onClick}
         >
             <ChevronLeft className="text-[#d8a95b]" />
@@ -39,6 +39,11 @@ export default function RoomsCarousel() {
         arrows: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+
+        responsive: [
+            { breakpoint: 1024, settings: { slidesToShow: 2 } },
+            { breakpoint: 640, settings: { slidesToShow: 1 } },
+        ],
     };
 
 

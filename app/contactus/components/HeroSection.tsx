@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HeroSection() {
 
     return (
-        <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+        <section className="relative lg:min-h-[75vh] min-h-[40vh] flex items-center justify-center overflow-hidden">
             <Image src={contactBanner} alt="abouutBanner" width={1920} height={1080} className="absolute inset-0 bg-cover bg-center w-full h-full" />
             <div className="absolute inset-0 bg-linear-to-t to-[#001422E5] via-[#00427462] from-[#00427400]" />
             <div className="relative z-10 text-center">

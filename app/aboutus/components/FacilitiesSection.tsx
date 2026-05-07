@@ -45,7 +45,7 @@ export default function FacilitiesSection() {
                     <div className="w-px h-16 bg-amber-400" />
                 </div>
                 {/* Grid of small images */}
-                <div className="absolute -bottom-8 -right-8 grid grid-cols-2 gap-2 w-44">
+                <div className="hidden sm:grid absolute -bottom-8 -right-8 grid-cols-2 gap-2 w-44">
                     {facilityImages.map((src, i) => (
                         <div key={i} className="rounded-xl overflow-hidden shadow-lg h-20">
                             <img src={src} alt="" className="w-full h-full object-cover" />
@@ -66,7 +66,7 @@ export default function FacilitiesSection() {
                 <p className="text-stone-500 text-sm leading-relaxed mb-8">
                     Integer ut tortor nunc. Curabitur metus tortor, posuere eget condimentum ut, convallis eu orci. Sed it suscipit eget, integer eu tincidunt neque, non convallis nunc.
                 </p>
-                <div className="flex gap-8">
+                <div className="flex flex-wrap gap-6 sm:gap-8">
                     {facilities.map((f, i) => (
                         <div key={i} className="flex flex-col items-center gap-2 text-center">
                             <div className="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 shadow-sm">

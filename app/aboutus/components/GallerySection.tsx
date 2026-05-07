@@ -20,8 +20,8 @@ export default function GallerySection() {
                     {images.slice(0, 4).map((img, i) => (
                         <div
                             key={i}
-                            className={`relative rounded-2xl overflow-hidden group cursor-pointer ${i === 0 || i === 3 ? "row-span-2" : ""}`}
-                            style={{ height: i === 0 || i === 3 ? "400px" : "190px" }}
+                            className={`relative rounded-2xl overflow-hidden group cursor-pointer ${i === 0 || i === 3 ? "md:row-span-2" : ""}`}
+                            style={{ height: i === 0 || i === 3 ? "clamp(180px, 25vw, 400px)" : "clamp(150px, 12vw, 190px)" }}
                         >
                             <img src={img.url} alt={img.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/40 transition-all duration-300 flex items-end p-4">

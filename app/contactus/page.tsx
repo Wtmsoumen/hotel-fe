@@ -42,11 +42,11 @@ export default function ContactUsPage() {
                     <p className="text-black text-sm leading-relaxed font-light w-full sm:w-[50%]">
                         Start your journey to luxury and relaxation with ease. Contact us today to reserve your villa, customize your stay, and ensure every detail is perfect. Your dream escape is just a click away!
                     </p>
-                    <div className="w-full flex items-center justify-between pt-10">
+                    <div className="w-full flex flex-col sm:flex-row items-center sm:justify-between pt-10">
                         {contactInfo.map((v, i) =>
-                            <div key={i} className={`flex w-[33%] h-[-webkit-fill-available] pt-8 `}>
-                                <div className={`${i === 0 ? `` : `border-l`} mr-12 h-[-webkit-fill-available]`} />
-                                <div className="flex flex-col items-center">
+                            <div key={i} className={`flex w-full sm:w-[33%] h-[-webkit-fill-available] pt-8`}>
+                                <div className={`${i === 0 ? `` : `lg:block hidden sm:border-l border-t sm:border-t-0 w-full sm:w-auto`} mr-0 sm:mr-12 h-[-webkit-fill-available]`} />
+                                <div className="flex flex-col items-center w-full">
                                     <div className="mb-4 bg-[#D8A95B1F] w-20 h-20 rounded-[20px] rotate-45 flex items-center justify-center">
                                         <Image src={v?.icon} alt={v?.title} width={24} height={24} className="h-12.5 w-auto -rotate-45" />
                                     </div>

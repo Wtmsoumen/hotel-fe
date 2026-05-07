@@ -11,11 +11,11 @@ const GetInTouch = () => {
                     <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-medium mb-4">Get In Touch</h2>
                     <p className="text-black font-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis mauris purus.</p>
                 </div>
-                <div className="flex gap-12 items-center">
-                    <div className='w-1/2'>
+                <div className="flex flex-col lg:flex-row gap-12 items-center">
+                    <div className='w-full lg:w-1/2'>
                         <h3 className="text-2xl sm:text-[40px] font-medium mb-10 leading-snug">We're always here to help, Contact us Today</h3>
                         <form className="space-y-8">
-                            <div className="grid grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                 <div>
                                     <label className="text-sm text-black block">Your First Name<span className="text-red-500">*</span></label>
                                     <input type="text" className="w-full border-b border-[#656565] focus:outline-none pb-2 bg-transparent" />
@@ -25,7 +25,7 @@ const GetInTouch = () => {
                                     <input type="text" className="w-full border-b border-[#656565] focus:outline-none pb-2 bg-transparent" />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                 <div>
                                     <label className="text-sm text-black block">Email Address<span className="text-red-500">*</span></label>
                                     <input type="email" className="w-full border-b border-[#656565] focus:outline-none pb-2 bg-transparent" />
@@ -44,7 +44,7 @@ const GetInTouch = () => {
                             </button>
                         </form>
                     </div>
-                    <div className="rounded-2xl overflow-hidden w-1/2 h-[520px]">
+                    <div className="rounded-2xl overflow-hidden w-full lg:w-1/2 h-64 sm:h-96 lg:h-[520px]">
                         <Image src={register} alt="Hotel Lobby" width={600} height={500} className="w-full h-full object-cover" />
                     </div>
                 </div>
