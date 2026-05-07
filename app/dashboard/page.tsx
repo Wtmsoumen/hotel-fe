@@ -286,7 +286,7 @@ function BookingsView() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      {/* <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <span className="section-tag" style={{ fontSize: 12 }}>History</span>
           <h2 className="text-lg font-semibold text-[#1a2332]">My Bookings</h2>
@@ -296,7 +296,7 @@ function BookingsView() {
           Filter by date
           <ChevronDown className="w-3.5 h-3.5" />
         </div>
-      </div>
+      </div> */}
 
       {/* Tabs */}
       <div className="flex gap-2 bg-white rounded-xl p-1 shadow-sm w-fit flex-wrap">
