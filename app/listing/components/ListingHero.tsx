@@ -11,7 +11,7 @@ export default function ListingHero() {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/listing1.png')" }}
+        style={{ backgroundImage: "url('/images/listing1.webp')" }}
       />
       <div className="absolute inset-0 bg-linear-to-t to-[#001422E5] via-[#00427462] from-[#00427400]" />
 

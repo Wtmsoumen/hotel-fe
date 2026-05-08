@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ExploretheBeautyoftheWorld from "@/public/images/ExploretheBeautyoftheWorld.png";
+import ExploretheBeautyoftheWorld from "@/public/images/ExploretheBeautyoftheWorld.webp";
 
 export default function ExploreBeauty() {
   return (

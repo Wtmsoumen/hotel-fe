@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import stayentLogoYellow from "../../../public/images/stayentLogoYellow.svg";
-import login from "../../../public/images/login.png";
+import login from "../../../public/images/login.webp";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);

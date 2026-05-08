@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hotelVidThum from "@/public/images/hotelVidThum.png"
+import hotelVidThum from "@/public/images/hotelVidThum.webp"
 import { Play } from "lucide-react";
 
 export default function PoolBanner() {

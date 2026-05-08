@@ -37,7 +37,7 @@ export default function Navbar() {
 
               {/* Logo */}
               <Link href="/" className="flex items-center gap-2.5 shrink-0">
-                <Image src="/images/logo.png" alt="Logo" width={1920} height={1080} className="w-[180px] h-auto" />
+                <Image src="/images/logo.webp" alt="Logo" width={1920} height={1080} className="w-[180px] h-auto" />
               </Link>
 
               {/* Desktop nav */}
@@ -81,7 +81,7 @@ export default function Navbar() {
               <div className="flex flex-col h-full p-6">
                 <div className="flex items-center justify-between mb-8">
                   <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setOpen(false)}>
-                    <Image src="/images/logo.png" alt="Logo" width={1920} height={1080} className="w-[150px] h-auto" />
+                    <Image src="/images/logo.webp" alt="Logo" width={1920} height={1080} className="w-[150px] h-auto" />
                   </Link>
                   <button className="text-white p-1" onClick={() => setOpen(false)} aria-label="Close Menu">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

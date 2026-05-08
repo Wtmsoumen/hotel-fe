@@ -67,7 +67,7 @@ export default function PackageBooking() {
           <div
             className="relative p-8 sm:p-12 lg:p-20 flex flex-col items-center justify-center h-full w-full lg:w-[85%]"
             style={{
-              backgroundImage: "url('/images/pbBgimg.png')",
+              backgroundImage: "url('/images/pbBgimg.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

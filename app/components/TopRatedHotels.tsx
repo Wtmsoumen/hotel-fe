@@ -2,9 +2,9 @@ import { ArrowRight, Clock3, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
-import dummy1 from "../../public/images/dummy1.png"
-import dummy2 from "../../public/images/dummy2.png"
-import dummy3 from "../../public/images/dummy3.png"
+import dummy1 from "../../public/images/dummy1.webp"
+import dummy2 from "../../public/images/dummy2.webp"
+import dummy3 from "../../public/images/dummy3.webp"
 
 const hotels = [
   {
@@ -105,7 +105,7 @@ export default function TopRatedHotels() {
                 <hr className="border-gray-200 my-2" />
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-0.5">
-                    {["", "", "", "", ""].map((i: any) => <FaStar key={i} className="text-[#161A1D]" />)}
+                    {["", "", "", "", ""].map((v: any, i: number) => <FaStar key={i} className="text-[#161A1D]" />)}
                     <span className="text-[#3F3E3E] text-[14px] font-normal ml-2 mt-1">65 reviews</span>
                   </div>
                   <div className="flex items-center gap-1">

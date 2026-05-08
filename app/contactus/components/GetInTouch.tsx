@@ -1,5 +1,5 @@
 import React from 'react'
-import register from "../../../public/images/register.png";
+import register from "../../../public/images/register.webp";
 import Image from "next/image";
 
 

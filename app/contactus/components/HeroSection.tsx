@@ -1,4 +1,4 @@
-import contactBanner from "../../../public/images/contactBanner.png"
+import contactBanner from "../../../public/images/contactBanner.webp"
 import Image from "next/image";
 
 export default function HeroSection() {

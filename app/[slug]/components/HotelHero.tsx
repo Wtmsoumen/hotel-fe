@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SomersetDowntown from "../../../public/images/SomersetDowntown.png"
+import SomersetDowntown from "../../../public/images/SomersetDowntown.webp"
 
 interface Props { name: string; image: string }
 

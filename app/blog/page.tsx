@@ -130,7 +130,7 @@ export default function BlogPage() {
       {/* Hero Banner */}
       <section className="relative h-[320px] sm:h-[420px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/banner1.png"
+          src="/images/banner1.webp"
           alt="Blog Banner"
           fill
           className="object-cover"
@@ -167,11 +167,10 @@ export default function BlogPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 rounded-full text-xs font-medium transition-all ${
-                  activeCategory === cat
+                className={`px-5 py-2 rounded-full text-xs font-medium transition-all ${activeCategory === cat
                     ? "bg-[#D8A95B] text-white"
                     : "border border-gray-200 text-gray-600 hover:border-[#D8A95B] hover:text-[#D8A95B]"
-                }`}
+                  }`}
               >
                 {cat}
               </button>

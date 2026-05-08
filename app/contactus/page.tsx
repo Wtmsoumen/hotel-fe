@@ -2,7 +2,7 @@
 
 import ListingFAQ from "../listing/components/ListingFAQ";
 import HeroSection from "./components/HeroSection";
-import register from "../../public/images/register.png";
+import register from "../../public/images/register.webp";
 import phoneTextCU from "../../public/images/phoneTextCU.svg"
 import mailCU from "../../public/images/mailCU.svg"
 import locationCU from "../../public/images/locationCU.svg"

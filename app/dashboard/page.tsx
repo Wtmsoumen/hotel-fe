@@ -778,7 +778,7 @@ export default function DashboardPage() {
       <aside className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-[#16191C] flex flex-col transition-transform duration-300 ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}>
         <div className="px-6 py-5 border-b border-white/10 flex items-center justify-between">
           <Link href="/">
-            <Image src="/images/logo.png" alt="Stayent" width={140} height={40} className="h-auto w-[130px] object-contain" />
+            <Image src="/images/logo.webp" alt="Stayent" width={140} height={40} className="h-auto w-[130px] object-contain" />
           </Link>
           <button className="lg:hidden text-white/60 hover:text-white" onClick={() => setSidebarOpen(false)}>
             <X className="w-5 h-5" />

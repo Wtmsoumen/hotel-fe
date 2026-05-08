@@ -1,4 +1,4 @@
-import abouutBanner from "../../../public/images/abouutBanner.png"
+import abouutBanner from "../../../public/images/abouutBanner.webp"
 import Image from "next/image";
 
 export default function HeroSection() {

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import stayentLogoYellow from "../../../public/images/stayentLogoYellow.svg";
-import register from "../../../public/images/register.png";
+import register from "../../../public/images/register.webp";
 
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);

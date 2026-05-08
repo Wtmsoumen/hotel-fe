@@ -1,4 +1,4 @@
-import LuxuryRoomCol from "../../../public/images/LuxuryRoomCol.png"
+import LuxuryRoomCol from "../../../public/images/LuxuryRoomCol.webp"
 import Image from "next/image";
 
 export default function WelcomeSection() {

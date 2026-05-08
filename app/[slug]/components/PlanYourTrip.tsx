@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Peaceofmind from "../../../public/images/PlanWithPeaceofMind.png"
+import Peaceofmind from "../../../public/images/PlanWithPeaceofMind.webp"
 
 export default function PlanYourTrip() {
   return (
